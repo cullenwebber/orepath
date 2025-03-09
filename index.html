@@ -2,14 +2,103 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/orepath/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Orepath</title>
-    <script type="module" crossorigin src="/orepath/assets/main-Nt5xkP64.js"></script>
-    <link rel="stylesheet" crossorigin href="/orepath/assets/main-BvtWSgIZ.css">
+    <script type="module" crossorigin src="/orepath/assets/main-Cs4GRv70.js"></script>
+    <link rel="stylesheet" crossorigin href="/orepath/assets/main-DSSCBSbX.css">
     <link rel="stylesheet" crossorigin href="/orepath/assets/the-new-css-reset-SYCyO-G6.css">
   </head>
-  <body>
-    <div id="app" class="bg-black"></div>
+  <body class="bg-background">
+    <header>
+      <div class="container flex flex-row items-center justify-between">
+        <img src="/orepath/logo.svg" alt="Orepath Logo" class="w-[70px] object-contain object-center" />
+        <div class="flex items-center justify-end gap-12 text-white">
+          <a href="#about" class="link-hover">About</a>
+          <a href="#services" class="link-hover">Services</a>
+          <a href="#team" class="link-hover">Team</a>
+          <a href="#contact" class="button">Contact Us</a>
+        </div>
+      </div>
+    </header>
+    <main class="overflow-hidden">
+      <!-- HERO SECTION -->
+      <!doctype html>
+      <section id="hero" class="relative h-lvh pb-0">
+        <div class="absolute left-0 top-0 z-10 h-full w-full bg-gradient-to-t from-background to-background/90"></div>
+        <img src="/orepath/hero-image.png" alt="Mine Site Hero Image" class="absolute left-0 top-0 h-full w-full object-cover object-center" />
+        <img src="/orepath/hero-logo.svg" alt="Black Orepath Logo" class="absolute bottom-0 right-0 z-10 w-1/2" />
+        <div class="container relative z-20 flex h-full flex-col justify-center gap-12">
+          <div class="flex flex-col gap-2">
+            <h1 class="is-h4 text-darkGrey">Orepath</h1>
+            <h2 class="is-h1 flex flex-col text-white">
+              <span class="">Smart, Reliable</span>
+              <span class="flex flex-row items-center gap-4">
+                <div class="gradient-line"></div>
+                Software
+              </span>
+            </h2>
+          </div>
+          <div class="flex w-full max-w-[450px] flex-col gap-8 self-center">
+            <p class="text-indent text-lightGrey">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <a href="#contact" class="button blue">Contact Us</a>
+          </div>
+          <a href="#about" class="absolute bottom-8 left-0 size-12"> <!doctype html>
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="48" height="48" rx="6" fill="#1A1A1A" />
+        <path
+          d="M23.4697 32.5303C23.7626 32.8232 24.2374 32.8232 24.5303 32.5303L29.3033 27.7574C29.5962 27.4645 29.5962 26.9896 29.3033 26.6967C29.0104 26.4038 28.5355 26.4038 28.2426 26.6967L24 30.9393L19.7574 26.6967C19.4645 26.4038 18.9896 26.4038 18.6967 26.6967C18.4038 26.9896 18.4038 27.4645 18.6967 27.7574L23.4697 32.5303ZM23.25 16L23.25 32L24.75 32L24.75 16L23.25 16Z"
+          fill="white"
+        />
+      </svg>
+       </a>
+        </div>
+      </section>
+      <!-- ABOUT SECTION -->
+      <!doctype html>
+      <section class="">
+        <div class="container flex items-center gap-24">
+          <div class="flex w-full flex-col gap-6">
+            <h3 class="is-h2">Who We Are</h3>
+            <p class="text-indent text-lightGrey">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              <br />
+              <br />
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <div class="mt-4 flex flex-row items-center gap-2">
+              <div class="rounded-full bg-blue px-4 py-1 text-background">SvelteKit</div>
+              <div class="rounded-full bg-yellow px-4 py-1 text-background">React Native</div>
+              <div class="rounded-full bg-pink px-4 py-1 text-background">.Net</div>
+            </div>
+          </div>
+          <!-- SVG ClipPath Definition -->
+          <svg width="0" height="0" class="absolute" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <clipPath id="image-mask" clipPathUnits="objectBoundingBox">
+                <path d="M 0 0 H 0.8 L 1 0.2 V 1 H 0.2 L 0 0.8 Z" />
+              </clipPath>
+            </defs>
+          </svg>
+          <div class="w-full overflow-hidden">
+            <img
+              src="/orepath/about-team.png"
+              alt="About image of the Orepath team"
+              class="h-full w-full object-cover object-center"
+              style="clip-path: url(#image-mask)"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- SOLUTIONS SECTION -->
+      <section class="">
+        <div class="container"></div>
+      </section>
+    </main>
+    <footer class=""></footer>
   </body>
 </html>
