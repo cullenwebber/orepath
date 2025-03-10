@@ -5,32 +5,100 @@
     <link rel="icon" type="image/svg+xml" href="/orepath/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Orepath</title>
-    <script type="module" crossorigin src="/orepath/assets/main-q0nRHSlE.js"></script>
+    <script type="module" crossorigin src="/orepath/assets/main-Dy1NkeKa.js"></script>
     <link rel="modulepreload" crossorigin href="/orepath/assets/swiper-BMEOS_3I.js">
-    <link rel="stylesheet" crossorigin href="/orepath/assets/main-CG-ggqcp.css">
+    <link rel="stylesheet" crossorigin href="/orepath/assets/main-D8uxCw9E.css">
     <link rel="stylesheet" crossorigin href="/orepath/assets/the-new-css-reset-SYCyO-G6.css">
   </head>
-  <body class="bg-background flex flex-col">
+  <body class="flex flex-col bg-background">
+    <!-- HEADER -->
     <header>
       <div class="container flex flex-row items-center justify-between">
-        <img src="/orepath/logo.svg" alt="Orepath Logo" class="w-[70px] object-contain object-center" />
-        <div class="flex items-center justify-end gap-12 text-white">
+        <img src="/orepath/logo.svg" alt="Orepath Logo" class="w-[50px] object-contain object-center sm:w-[70px]" />
+    
+        <!-- Desktop Menu -->
+        <div class="hidden items-center justify-end gap-12 text-white md:flex">
           <a href="#about" class="link-hover">About</a>
           <a href="#services" class="link-hover">Services</a>
           <a href="#team" class="link-hover">Team</a>
           <a href="#contact" class="button">Contact Us</a>
         </div>
+    
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="relative z-50 border-none text-white outline-none md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
     </header>
+    <!-- Mobile Menu (Fullscreen Slide-in) -->
+    <div
+      id="mobile-menu"
+      class="fixed bottom-0 right-0 top-0 z-40 w-full translate-x-full bg-background px-[5%] transition-transform duration-300 ease-in-out md:hidden"
+    >
+      <div class="flex h-full flex-col pt-32 text-white">
+        <a href="#about" class="link-hover border-b border-darkGrey py-6 text-2xl font-semibold">About</a>
+        <a href="#services" class="link-hover border-b border-darkGrey py-6 text-2xl font-semibold">Services</a>
+        <a href="#team" class="link-hover border-b border-darkGrey py-6 text-2xl font-semibold">Team</a>
+        <a href="#contact" class="link-hover py-6 text-2xl font-semibold">Contact Us</a>
+      </div>
+    
+      <svg class="w-3/4 max-w-[300px] xl:max-w-[450px] absolute bottom-0 right-0" viewBox="0 0 464 248" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_28_285)">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M24.5854 226.049C34.9324 241.298 48.0999 254.451 63.3338 264.798L86.6824 224.36C78.3867 218.312 71.0714 210.996 65.0231 202.701L24.5854 226.049Z"
+            fill="#009FE2"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0 155.099C1.32731 173.983 6.28963 191.857 14.163 208.056L54.6157 184.692C50.5131 175.476 47.7831 165.537 46.6971 155.099H0Z"
+            fill="#AFCB1F"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M14.163 81.3428C6.28963 97.542 1.32731 115.415 0 134.299H46.6971C47.7982 123.862 50.5282 113.907 54.6157 104.706L14.163 81.3428Z"
+            fill="#FFCB00"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M63.3338 24.5864C48.0999 34.9183 34.9173 48.1009 24.5854 63.3348L65.0382 86.6984C71.0865 78.4028 78.4018 71.0875 86.6975 65.0392L63.3338 24.5864Z"
+            fill="#ED7F1A"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M134.285 0C115.416 1.34239 97.5425 6.28963 81.3433 14.163L104.692 54.6157C113.892 50.5131 123.847 47.7831 134.285 46.682V0Z"
+            fill="#E40980"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M81.3433 275.236C100.484 284.557 121.977 289.776 144.707 289.776C176.789 289.776 206.427 279.369 230.439 261.737V193.335C213.486 223.154 181.449 243.26 144.707 243.26C130.454 243.26 116.924 240.228 104.707 234.798L81.3433 275.236ZM243.245 144.707C243.245 214.828 243.245 284.95 243.245 355.071H289.761V250.078V234.753C293.833 237.649 298.117 240.274 302.581 242.596C317.846 250.575 335.206 255.085 353.623 255.085C414.588 255.085 464 205.673 464 144.707C464 83.7417 414.573 34.3145 353.623 34.3145C325.176 34.3145 299.248 45.0838 279.67 62.7611C288.675 77.5727 295.327 93.983 299.082 111.479C310.304 93.1082 330.53 80.8457 353.623 80.8457C388.902 80.8457 417.484 109.443 417.484 144.707C417.484 179.972 388.902 208.569 353.623 208.569C332.763 208.569 314.226 198.569 302.581 183.094C301.33 181.435 300.168 179.715 299.082 177.935C293.17 168.252 289.776 156.879 289.776 144.707C289.776 140.379 289.58 136.11 289.218 131.887C287.333 110.303 280.696 90.0615 270.394 72.2182C268.177 68.372 265.779 64.6465 263.215 61.0266C238.81 26.5467 199.76 3.16798 155.099 0.015625V46.6977C191.917 50.5589 222.702 74.6918 236.08 107.724C242.883 124.556 243.245 129.157 243.245 144.707Z"
+            fill="#3E3E3E"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_28_285">
+            <rect width="464" height="248" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
     <main class="overflow-hidden">
       <!-- HERO SECTION -->
-      <section id="hero" class="relative h-lvh pb-0">
+      <section id="hero" class="relative h-lvh max-md:pt-0 pb-0">
         <div class="absolute left-0 top-0 z-10 h-full w-full bg-gradient-to-t from-background to-background/90"></div>
         <img src="/orepath/hero-image.png" alt="Mine Site Hero Image" class="absolute left-0 top-0 h-full w-full object-cover object-center" />
         <img src="/orepath/hero-logo.svg" alt="Black Orepath Logo" class="absolute bottom-0 right-0 z-10 w-1/2" />
-        <div class="container relative z-20 flex h-full flex-col justify-center gap-12">
+        <div class="container relative z-20 flex h-full flex-col justify-center gap-6 md:gap-12">
           <div class="flex flex-col gap-2">
-            <h1 class="is-supertitle text-2xl text-darkGrey">Orepath</h1>
+            <h1 class="is-supertitle text-xl sm:text-2xl text-darkGrey">Orepath</h1>
             <h2 class="is-h1 flex flex-col text-white">
               <span class="">Smart, Reliable</span>
               <span class="flex flex-row items-center gap-4">
@@ -39,7 +107,7 @@
               </span>
             </h2>
           </div>
-          <div class="flex w-full max-w-[450px] flex-col gap-8 self-center">
+          <div class="flex w-full md:max-w-[450px] flex-col gap-8 self-center">
             <p class="text-indent text-lightGrey">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
@@ -57,10 +125,10 @@
       </section>
       <!-- ABOUT SECTION -->
       <section id="about" class="">
-        <div class="container flex items-center gap-24">
+        <div class="container flex flex-col-reverse items-center gap-12 lg:flex-row lg:gap-24">
           <div class="flex w-full flex-col gap-6">
             <div class="flex flex-row gap-4">
-              <span class="is-supertitle pt-1 text-darkGrey">01</span>
+              <span class="is-supertitle text-darkGrey sm:pt-1">01</span>
               <h3 class="is-h2">Who We Are</h3>
             </div>
             <p class="text-indent text-lightGrey">
@@ -85,501 +153,556 @@
                 </clipPath>
               </defs>
             </svg>
-            <img src="/orepath/about-team.png" alt="About image of the Orepath team" class="about-image h-[700px] w-full object-cover object-center" />
+            <img
+              src="/orepath/about-team.png"
+              alt="About image of the Orepath team"
+              class="about-image h-[350px] w-full object-cover object-center sm:h-[450px] md:h-[550px] lg:h-[450px] xl:h-[600px] 2xl:h-[700px]"
+            />
           </div>
         </div>
       </section>
       <!-- SOLUTIONS SECTION -->
       <section id="services" class="">
-        <div class="container flex flex-col gap-24">
-          <div class="grid grid-cols-3 gap-24">
-            <div class="col-span-2 col-start-2 flex flex-col gap-6">
+        <div class="container flex flex-col gap-12 md:gap-16 lg:gap-24">
+          <div class="grid grid-cols-3 gap-24 max-md:pb-8">
+            <div class="col-span-3 lg:col-span-2 lg:col-start-2 flex flex-col gap-6">
               <div class="flex flex-row gap-4">
-                <span class="is-supertitle pt-1 text-darkGrey">02</span>
+                <span class="is-supertitle sm:pt-1 text-darkGrey">02</span>
                 <h3 class="is-h2 flex flex-col text-white">
                   <span class="">Solutions beyond</span>
                   <span class="flex flex-row items-center gap-4">
-                    <div class="gradient-line w-[200px]"></div>
+                    <div class="gradient-line w-[140px] sm:w-[200px]"></div>
                     the wall
                   </span>
                 </h3>
               </div>
-              <p class="text-indent is-h4 text-lightGrey">
+              <p class="text-indent max-sm:text-base is-h4 text-lightGrey max-xl:text-xl">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                 veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </p>
             </div>
           </div>
-         <div class="grid grid-cols-3 gap-24 border-b border-b-blue pb-32">
-           <div class="flex flex-col gap-8">
-             <h4 class="is-h3">
-               Project Consulting <br />
-               &amp; Due Diligence
-             </h4>
-             <a href="#contact" class="button blue">Contact Us</a>
-           </div>
-           <div class="col-span-2 grid grid-cols-2 items-start gap-x-4">
-             <!-- prettier-ignore -->
-             <div class="accordion blue">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion blue">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion blue">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion blue">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion blue">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion blue">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion blue">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion blue">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion blue">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion blue">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion blue">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion blue">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-           </div>
-         </div>
-         <div class="grid grid-cols-3 gap-24 pb-32 border-b-yellow border-b">
-           <div class="flex flex-col gap-8">
-             <h4 class="is-h3">Secondments &amp; <br/>Labour Hire</h4>
-             <a href="#contact" class="button yellow">Contact Us</a>
-           </div>
-           <div class="col-span-2 grid grid-cols-2 gap-x-4 items-start">
-             <!-- prettier-ignore -->
-             <div class="accordion yellow">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion yellow">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion yellow">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion yellow">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion yellow">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion yellow">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion yellow">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion yellow">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion yellow">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion yellow">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion yellow">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion yellow">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-           </div>
-         </div>
-         <div class="grid grid-cols-3 gap-24 pb-32">
-           <div class="flex flex-col gap-8">
-             <h4 class="is-h3">Bespoke / Tailored <br/>Software Solutions</h4>
-             <a href="#contact" class="button pink">Contact Us</a>
-           </div>
-           <div class="col-span-2 grid grid-cols-2 gap-x-4 items-start">
-             <!-- prettier-ignore -->
-             <div class="accordion pink">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion pink">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion pink">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion pink">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion pink">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion pink">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion pink">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion pink">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion pink">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion pink">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion pink">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-             <div class="accordion pink">
-               <div class="accordion-header">
-                 Open pit optimisations
-                 <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
-                   <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
-                 </svg>
-               </div>
-               <div class="accordion-content">
-                 <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-               </div>
-             </div>
-           </div>
-         </div>
-         <svg width="0" height="0" class="absolute">
-           <defs>
-             <clipPath id="service-mask" clipPathUnits="objectBoundingBox">
-               <path d="M0 0H0.9L1 0.2V1H0.1L0 0.75V0Z" />
-             </clipPath>
-           </defs>
-         </svg>
-         <img src="/orepath/solutions-image.png" alt="" class="w-full h-[600px] service-mask">
+          <div class="flex flex-col gap-16 xl:gap-24">
+            <!-- prettier-ignore -->
+            <div class="grid grid-cols-3 gap-8 border-b-blue pb-8 lg:gap-16 lg:border-b lg:pb-32 xl:gap-24 relative">
+              <svg class="max-w-[300px] absolute bottom-0 left-0 max-lg:hidden" viewBox="0 0 285 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_28_47)">
+                  <path d="M284.768 2.79395V207.158H241.56V43.8064H240.363L193.563 73.1437V34.8256L244.155 2.79395H284.768Z" fill="#009FE2" />
+                  <path
+                    d="M82.5248 211.648C65.3614 211.582 50.593 207.357 38.2194 198.975C25.9123 190.593 16.4326 178.452 9.78012 162.553C3.19418 146.654 -0.0655267 127.528 0.000997867 105.175C0.000997867 82.8897 3.29397 63.8969 9.87991 48.1971C16.5324 32.4973 26.0121 20.5561 38.3192 12.3736C50.6928 4.12453 65.428 0 82.5248 0C99.6216 0 114.324 4.12453 126.631 12.3736C139.004 20.6226 148.517 32.5971 155.17 48.2969C161.822 63.9302 165.115 82.8897 165.049 105.175C165.049 127.594 161.722 146.753 155.07 162.653C148.484 178.552 139.037 190.693 126.73 199.075C114.423 207.457 99.6881 211.648 82.5248 211.648ZM82.5248 175.825C94.2331 175.825 103.58 169.937 110.565 158.162C117.55 146.387 121.009 128.725 120.943 105.175C120.943 89.6752 119.346 76.7694 116.153 66.4581C113.026 56.1468 108.569 48.3967 102.782 43.2077C97.0604 38.0188 90.3082 35.4244 82.5248 35.4244C70.883 35.4244 61.5695 41.2453 54.5844 52.8871C47.5994 64.5289 44.0736 81.9583 44.007 105.175C44.007 120.875 45.5704 133.981 48.697 144.491C51.8902 154.936 56.3806 162.786 62.1683 168.041C67.9559 173.23 74.7414 175.825 82.5248 175.825Z"
+                    fill="#009FE2"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_28_47">
+                    <rect width="284.768" height="140" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <div class="flex flex-col gap-8 max-lg:col-span-3">
+                <h4 class="is-h3">
+                  Project Consulting <br />
+                  &amp; Due Diligence
+                </h4>
+                <a href="#contact" class="button blue">Contact Us</a>
+              </div>
+              <div class="col-span-3 grid items-start gap-x-4 md:grid-cols-2 lg:col-span-2">
+                <!-- prettier-ignore -->
+                <div class="accordion blue">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion blue">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion blue">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion blue">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion blue">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion blue">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion blue">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion blue">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion blue">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion blue">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion blue">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion blue">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-8 border-b-yellow pb-8 lg:gap-16 lg:border-b lg:pb-32 xl:gap-24 relative">
+              <svg class="max-w-[300px] absolute bottom-0 left-0 max-lg:hidden" viewBox="0 0 342 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_28_44)">
+                  <path
+                    d="M82.5248 211.648C65.3614 211.582 50.593 207.357 38.2194 198.975C25.9123 190.593 16.4326 178.452 9.78012 162.553C3.19418 146.654 -0.0655267 127.528 0.000997867 105.175C0.000997867 82.8897 3.29397 63.8969 9.87991 48.1971C16.5324 32.4973 26.0121 20.5561 38.3192 12.3736C50.6928 4.12453 65.428 0 82.5248 0C99.6216 0 114.324 4.12453 126.631 12.3736C139.004 20.6226 148.517 32.5971 155.17 48.2969C161.822 63.9302 165.115 82.8897 165.049 105.175C165.049 127.594 161.722 146.753 155.07 162.653C148.484 178.552 139.037 190.693 126.73 199.075C114.423 207.457 99.6881 211.648 82.5248 211.648ZM82.5248 175.825C94.2331 175.825 103.58 169.937 110.565 158.162C117.55 146.387 121.009 128.725 120.943 105.175C120.943 89.6752 119.346 76.7694 116.153 66.4581C113.026 56.1468 108.569 48.3967 102.782 43.2077C97.0604 38.0188 90.3082 35.4244 82.5248 35.4244C70.883 35.4244 61.5695 41.2453 54.5844 52.8871C47.5994 64.5289 44.0736 81.9583 44.007 105.175C44.007 120.875 45.5704 133.981 48.697 144.491C51.8902 154.936 56.3806 162.786 62.1683 168.041C67.9559 173.23 74.7414 175.825 82.5248 175.825Z"
+                    fill="#FFCB00"
+                  />
+                  <path
+                    d="M196.045 207.158V176.024L268.79 108.668C274.977 102.681 280.166 97.2923 284.357 92.5025C288.614 87.7127 291.841 83.0227 294.036 78.4325C296.231 73.7758 297.329 68.7532 297.329 63.3647C297.329 57.3775 295.965 52.2218 293.238 47.8977C290.51 43.5071 286.785 40.1476 282.062 37.8192C277.338 35.4244 271.983 34.2269 265.996 34.2269C259.743 34.2269 254.288 35.4909 249.631 38.0188C244.974 40.5468 241.382 44.1723 238.854 48.8956C236.326 53.6188 235.062 59.2402 235.062 65.7596H194.05C194.05 52.3881 197.076 40.7796 203.13 30.934C209.184 21.0883 217.666 13.4712 228.576 8.08273C239.486 2.69424 252.059 0 266.295 0C280.931 0 293.67 2.59446 304.514 7.78338C315.424 12.9058 323.906 20.0239 329.959 29.1378C336.013 38.2517 339.04 48.696 339.04 60.4709C339.04 68.1877 337.51 75.8048 334.45 83.3221C331.456 90.8394 326.101 99.1882 318.384 108.369C310.667 117.482 299.79 128.426 285.754 141.199L255.917 170.436V171.833H341.734V207.158H196.045Z"
+                    fill="#FFCB00"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_28_44">
+                    <rect width="341.734" height="140" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <div class="flex flex-col gap-8 max-lg:col-span-3">
+                <h4 class="is-h3">Secondments &amp; <br />Labour Hire</h4>
+                <a href="#contact" class="button yellow">Contact Us</a>
+              </div>
+              <div class="col-span-3 grid items-start gap-x-4 md:grid-cols-2 lg:col-span-2">
+                <!-- prettier-ignore -->
+                <div class="accordion yellow">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion yellow">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion yellow">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion yellow">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion yellow">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion yellow">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion yellow">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion yellow">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion yellow">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion yellow">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion yellow">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion yellow">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="relative grid grid-cols-3 gap-16 pb-8 md:pb-32 xl:gap-24">
+              <svg class="max-w-[300px] absolute bottom-0 left-0 max-lg:hidden" viewBox="0 0 351 212" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_28_154)">
+                  <path
+                    d="M82.5248 211.648C65.3614 211.582 50.593 207.357 38.2194 198.975C25.9123 190.593 16.4326 178.452 9.78012 162.553C3.19418 146.654 -0.0655267 127.528 0.000997867 105.175C0.000997867 82.8897 3.29397 63.8969 9.87991 48.1971C16.5324 32.4973 26.0121 20.5561 38.3192 12.3736C50.6928 4.12453 65.428 0 82.5248 0C99.6216 0 114.324 4.12453 126.631 12.3736C139.004 20.6226 148.517 32.5971 155.17 48.2969C161.822 63.9302 165.115 82.8897 165.049 105.175C165.049 127.594 161.722 146.753 155.07 162.653C148.484 178.552 139.037 190.693 126.73 199.075C114.423 207.457 99.6881 211.648 82.5248 211.648ZM82.5248 175.825C94.2331 175.825 103.58 169.937 110.565 158.162C117.55 146.387 121.009 128.725 120.943 105.175C120.943 89.6752 119.346 76.7694 116.153 66.4581C113.026 56.1468 108.569 48.3967 102.782 43.2077C97.0604 38.0188 90.3082 35.4244 82.5248 35.4244C70.883 35.4244 61.5695 41.2453 54.5844 52.8871C47.5994 64.5289 44.0736 81.9583 44.007 105.175C44.007 120.875 45.5704 133.981 48.697 144.491C51.8902 154.936 56.3806 162.786 62.1683 168.041C67.9559 173.23 74.7414 175.825 82.5248 175.825Z"
+                    fill="#E40980"
+                  />
+                  <path
+                    d="M271.584 209.952C256.682 209.952 243.411 207.391 231.769 202.268C220.194 197.079 211.047 189.961 204.328 180.914C197.675 171.8 194.249 161.289 194.05 149.381H237.557C237.823 154.37 239.453 158.761 242.446 162.553C245.506 166.278 249.564 169.172 254.62 171.234C259.676 173.297 265.364 174.328 271.684 174.328C278.27 174.328 284.091 173.164 289.146 170.835C294.202 168.507 298.161 165.28 301.021 161.156C303.882 157.031 305.312 152.275 305.312 146.886C305.312 141.431 303.782 136.608 300.722 132.417C297.728 128.16 293.404 124.833 287.749 122.439C282.161 120.044 275.509 118.846 267.792 118.846H248.733V87.114H267.792C274.312 87.114 280.066 85.9831 285.055 83.7212C290.111 81.4594 294.036 78.3327 296.83 74.3413C299.624 70.2833 301.021 65.56 301.021 60.1715C301.021 55.0491 299.79 50.5587 297.329 46.7003C294.934 42.7753 291.541 39.7152 287.151 37.5199C282.827 35.3246 277.771 34.2269 271.983 34.2269C266.129 34.2269 260.774 35.2913 255.917 37.4201C251.061 39.4824 247.169 42.4427 244.242 46.3011C241.315 50.1596 239.752 54.6832 239.552 59.8722H198.141C198.34 48.0973 201.7 37.7195 208.219 28.7386C214.739 19.7578 223.52 12.7395 234.563 7.68359C245.673 2.5612 258.213 0 272.183 0C286.286 0 298.626 2.5612 309.204 7.68359C319.781 12.806 327.997 19.7246 333.851 28.4393C339.772 37.0875 342.699 46.8001 342.632 57.577C342.699 69.0193 339.14 78.5656 331.955 86.2159C324.837 93.8662 315.557 98.7225 304.115 100.785V102.381C319.149 104.311 330.591 109.533 338.441 118.048C346.358 126.497 350.283 137.074 350.216 149.78C350.283 161.422 346.923 171.767 340.138 180.814C333.419 189.861 324.138 196.979 312.297 202.168C300.456 207.357 286.885 209.952 271.584 209.952Z"
+                    fill="#E40980"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_28_154">
+                    <rect width="350.217" height="212" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <div class="flex flex-col gap-8 max-lg:col-span-3">
+                <h4 class="is-h3">Bespoke / Tailored <br />Software Solutions</h4>
+                <a href="#contact" class="button pink">Contact Us</a>
+              </div>
+              <div class="col-span-3 grid items-start gap-x-4 md:grid-cols-2 lg:col-span-2">
+                <!-- prettier-ignore -->
+                <div class="accordion pink">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion pink">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion pink">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion pink">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion pink">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion pink">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion pink">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion pink">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion pink">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion pink">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion pink">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+                <div class="accordion pink">
+                  <div class="accordion-header">
+                    Open pit optimisations
+                    <svg class="size-3" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="7.52173" x2="7.52173" y2="15" stroke="#009FE2" stroke-width="2" />
+                      <line y1="6.82617" x2="15" y2="6.82617" stroke="#009FE2" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <svg width="0" height="0" class="absolute">
+            <defs>
+              <clipPath id="service-mask" clipPathUnits="objectBoundingBox">
+                <path d="M0 0H0.9L1 0.2V1H0.1L0 0.75V0Z" />
+              </clipPath>
+            </defs>
+          </svg>
+          <img src="/orepath/solutions-image.png" alt="" class="service-mask h-[200px] sm:h-[400px] lg:h-[600px] w-full" />
         </div>
       </section>
       <!-- TEAM SECTION -->
@@ -605,8 +728,8 @@
               </p>
             </div>
           </div>
-          <div class="team-group flex w-3/4 flex-row gap-8">
-            <div class="mt-[40%] flex flex-col gap-12">
+          <div class="team-group flex flex-col gap-4 sm:gap-8 md:flex-row xl:w-3/4">
+            <div class="flex flex-col gap-4 sm:gap-8 md:mt-[40%] md:gap-12">
               <!-- prettier-ignore -->
               <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg">
                 <defs>
@@ -647,7 +770,7 @@
                 <p class="text-lightGrey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
               </div>
             </div>
-            <div class="flex flex-col gap-16">
+            <div class="flex flex-col gap-4 sm:gap-8 md:gap-16">
               <!-- prettier-ignore -->
               <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg">
                 <defs>
@@ -699,7 +822,7 @@
             <h5 class="is-h2 flex flex-col text-white">
               <span class="">See what our</span>
               <span class="flex flex-row items-center gap-4">
-                <div class="gradient-line w-[200px]"></div>
+                <div class="gradient-line w-[80px] sm:w-[200px]"></div>
                 clients say
               </span>
             </h5>
@@ -788,14 +911,14 @@
     <footer class="relative flex flex-col items-center">
       <div class="absolute left-0 top-0 z-10 h-full w-full bg-gradient-to-t from-background/90 to-background"></div>
       <img src="/orepath/hero-image.png" alt="" class="absolute left-0 top-0 h-full w-full" />
-      <div class="container relative z-30 flex flex-col gap-48">
-        <div class="flex flex-col gap-8">
+      <div class="container relative z-30 flex flex-col gap-32 sm:gap-48">
+        <div class="flex flex-col gap-8 max-sm:pb-24">
           <div class="flex flex-row gap-4">
             <span class="is-supertitle pt-1 text-darkGrey">05</span>
             <h3 class="is-h2 flex flex-col text-white">
               <span class="">Let's get in</span>
               <span class="flex flex-row items-center gap-4">
-                <div class="gradient-line w-[200px]"></div>
+                <div class="gradient-line w-[120px] sm:w-[200px]"></div>
                 touch
               </span>
             </h3>
@@ -805,9 +928,9 @@
             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.F
           </p>
         </div>
-        <div class="relative flex w-[65%] flex-row justify-between gap-16 self-end border-t border-darkGrey">
+        <div class="relative flex w-full flex-col justify-between self-end border-t border-darkGrey sm:flex-row sm:gap-16 xl:w-[65%]">
           <!-- prettier-ignore -->
-          <svg class="w-3/4 max-w-[450px] absolute bottom-full right-0" viewBox="0 0 464 248" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="w-full sm:w-3/4 max-w-[300px] xl:max-w-[450px] absolute bottom-full right-0" viewBox="0 0 464 248" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_28_285)">
               <path
                 fill-rule="evenodd"
@@ -853,9 +976,9 @@
             </defs>
           </svg>
           <h6 class="is-supertitle w-fit shrink-0 py-6">Contact</h6>
-          <div class="flex w-3/4 flex-col">
+          <div class="flex w-full sm:w-3/4 flex-col">
             <a href="mailto:mail@email.com" class="is-h4 flex flex-row items-center gap-8 border-b border-darkGrey py-6 font-semibold">
-              <svg class="size-6" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="size-4 lg:size-6" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M11.4395 0.346875C10.648 -0.115625 9.35225 -0.115625 8.5605 0.346875L0.718018 5.3729L7.01201 11.6669H12.9895L19.2837 5.37266L11.4395 0.346875Z"
         fill="#3E3E3E"
@@ -868,7 +991,7 @@
      Hello@email.com</a
             >
             <a href="tel:0400 000 000" class="is-h4 flex flex-row items-center gap-8 border-b border-darkGrey py-6 font-semibold">
-              <svg class="size-6" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="size-4 lg:size-6" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M19.8881 14.9201V17.9201C19.8892 18.1986 19.8322 18.4743 19.7206 18.7294C19.6091 18.9846 19.4454 19.2137 19.2402 19.402C19.035 19.5902 18.7927 19.7336 18.5289 19.8228C18.265 19.912 17.9855 19.9452 17.7081 19.9201C14.631 19.5857 11.6751 18.5342 9.07812 16.8501C6.66194 15.3148 4.61345 13.2663 3.07812 10.8501C1.38809 8.2413 0.33636 5.27109 0.00811671 2.1801C-0.0168728 1.90356 0.0159916 1.62486 0.104617 1.36172C0.193243 1.09859 0.335688 0.856786 0.522883 0.651718C0.710078 0.44665 0.937922 0.282806 1.19191 0.170619C1.44589 0.0584315 1.72046 0.000358432 1.99812 9.69523e-05H4.99812C5.48342 -0.00467949 5.95391 0.167176 6.32188 0.48363C6.68985 0.800084 6.93019 1.23954 6.99812 1.7201C7.12474 2.68016 7.35957 3.62282 7.69812 4.5301C7.83266 4.88802 7.86178 5.27701 7.78202 5.65098C7.70227 6.02494 7.51698 6.36821 7.24812 6.6401L5.97812 7.9101C7.40167 10.4136 9.47457 12.4865 11.9781 13.9101L13.2481 12.6401C13.52 12.3712 13.8633 12.1859 14.2372 12.1062C14.6112 12.0264 15.0002 12.0556 15.3581 12.1901C16.2654 12.5286 17.2081 12.7635 18.1681 12.8901C18.6539 12.9586 19.0975 13.2033 19.4146 13.5776C19.7318 13.9519 19.9003 14.4297 19.8881 14.9201Z"
         fill="#3E3E3E"
@@ -877,7 +1000,7 @@
      0400 000 000</a
             >
             <a href="https://linkedin.com" class="is-h4 flex flex-row items-center gap-8 border-b border-darkGrey py-6 font-semibold">
-              <svg class="size-6" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="size-4 lg:size-6" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M9.5 0C4.2541 0 0 4.2541 0 9.5C0 14.7459 4.2541 19 9.5 19C14.7459 19 19 14.7459 19 9.5C19 4.2541 14.7459 0 9.5 0ZM6.73941 14.3613H4.42573V7.40057H6.73941V14.3613ZM5.58264 6.45007H5.56757C4.79117 6.45007 4.28903 5.91561 4.28903 5.24764C4.28903 4.5646 4.80653 4.04492 5.59801 4.04492C6.38948 4.04492 6.87654 4.5646 6.89162 5.24764C6.89162 5.91561 6.38948 6.45007 5.58264 6.45007ZM15.0821 14.3613H12.7687V10.6375C12.7687 9.70164 12.4337 9.06339 11.5965 9.06339C10.9574 9.06339 10.5768 9.49391 10.4095 9.90951C10.3483 10.0582 10.3334 10.2661 10.3334 10.4741V14.3613H8.01983C8.01983 14.3613 8.05013 8.0536 8.01983 7.40057H10.3334V8.38614C10.6408 7.91183 11.1909 7.2372 12.4184 7.2372C13.9407 7.2372 15.0821 8.23205 15.0821 10.37V14.3613Z"
         fill="#3E3E3E"
@@ -886,7 +1009,7 @@
      Linkedin</a
             >
             <a href="https://linkedin.com" class="is-h4 flex flex-row gap-8 py-6 font-semibold">
-              <svg class="size-6 mt-1" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="size-4 lg:size-6 mt-1" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         fill-rule="evenodd"
         clip-rule="evenodd"
@@ -931,7 +1054,7 @@
               fill="white"
             />
           </svg>
-          <div class="flex flex-row items-center justify-between text-lightGrey">
+          <div class="flex flex-col items-center justify-between gap-4 text-lightGrey sm:flex-row">
             <p class="text-white">&copy; <span id="year"></span> Orepath. All Rights Reserved.</p>
             <a href="https://psdigital.com.au">Website by PS Digital</a>
           </div>
