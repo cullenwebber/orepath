@@ -5,9 +5,10 @@
     <link rel="icon" type="image/svg+xml" href="/orepath/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Orepath</title>
-    <script type="module" crossorigin src="/orepath/assets/main-Dy1NkeKa.js"></script>
+    <script type="module" crossorigin src="/orepath/assets/main-Bi7fN4Vi.js"></script>
     <link rel="modulepreload" crossorigin href="/orepath/assets/swiper-BMEOS_3I.js">
-    <link rel="stylesheet" crossorigin href="/orepath/assets/main-D8uxCw9E.css">
+    <link rel="modulepreload" crossorigin href="/orepath/assets/lottie-web-DWIlejbA.js">
+    <link rel="stylesheet" crossorigin href="/orepath/assets/main-C0HM85Kz.css">
     <link rel="stylesheet" crossorigin href="/orepath/assets/the-new-css-reset-SYCyO-G6.css">
   </head>
   <body class="flex flex-col bg-background">
@@ -92,13 +93,13 @@
     </div>
     <main class="overflow-hidden">
       <!-- HERO SECTION -->
-      <section id="hero" class="relative h-lvh max-md:pt-0 pb-0">
+      <section id="hero" class="relative h-lvh pb-0 max-md:pt-0 overflow-hidden">
         <div class="absolute left-0 top-0 z-10 h-full w-full bg-gradient-to-t from-background to-background/90"></div>
-        <img src="/orepath/hero-image.png" alt="Mine Site Hero Image" class="absolute left-0 top-0 h-full w-full object-cover object-center" />
-        <img src="/orepath/hero-logo.svg" alt="Black Orepath Logo" class="absolute bottom-0 right-0 z-10 w-1/2" />
+        <img src="/orepath/hero-image.png" alt="Mine Site Hero Image" class="absolute left-0 top-0 h-full w-full object-cover object-center" data-parallax />
+        <div id="animated-logo" class="absolute -right-[15%] -bottom-[2.5%] z-10 w-full md:w-[70%]"></div>
         <div class="container relative z-20 flex h-full flex-col justify-center gap-6 md:gap-12">
           <div class="flex flex-col gap-2">
-            <h1 class="is-supertitle text-xl sm:text-2xl text-darkGrey">Orepath</h1>
+            <h1 class="is-supertitle text-xl text-darkGrey sm:text-2xl">Orepath</h1>
             <h2 class="is-h1 flex flex-col text-white">
               <span class="">Smart, Reliable</span>
               <span class="flex flex-row items-center gap-4">
@@ -107,7 +108,7 @@
               </span>
             </h2>
           </div>
-          <div class="flex w-full md:max-w-[450px] flex-col gap-8 self-center">
+          <div class="flex w-full flex-col gap-8 self-center md:max-w-[450px]">
             <p class="text-indent text-lightGrey">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
@@ -908,9 +909,9 @@
       </section>
     </main>
     <!-- FOOTER -->
-    <footer class="relative flex flex-col items-center">
-      <div class="absolute left-0 top-0 z-10 h-full w-full bg-gradient-to-t from-background/90 to-background"></div>
-      <img src="/orepath/hero-image.png" alt="" class="absolute left-0 top-0 h-full w-full" />
+    <footer class="relative flex flex-col items-center overflow-hidden">
+      <div class="absolute left-0 -top-[1px] z-20 h-[calc(100%+1px)] w-full bg-gradient-to-t from-background/90 to-background"></div>
+      <img src="/orepath/hero-image.png" alt="" class="absolute left-0 top-0 h-full w-full" data-parallax />
       <div class="container relative z-30 flex flex-col gap-32 sm:gap-48">
         <div class="flex flex-col gap-8 max-sm:pb-24">
           <div class="flex flex-row gap-4">
